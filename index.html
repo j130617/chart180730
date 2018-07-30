@@ -207,12 +207,4 @@ function type(d) {
   d.value = +d.value;
   return d;
 }
-function dollarFormatter(n) {
-  n = Math.round(n);
-  var result2 = n;
-  if (Math.abs(n) > 1000) {
-    result = Math.round(n/1000) + 'K';
-  }
-  return result2;
-}
 </script>
