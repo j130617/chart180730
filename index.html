@@ -79,6 +79,14 @@ var chart = d3.select(".chart")
     start: 0,
     class: 'totaal'
   });
+   
+  data.push({
+    name: 'Doel',
+    end: 100,
+    //start: 0,
+    class: 'doel'
+  });
+    
   x.domain(data.map(function(d) { return d.name; }));
   y.domain([0, d3.max(data, function(d) { return d.end; })]);
  
