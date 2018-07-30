@@ -65,10 +65,10 @@ d3.csv("datatotaal.csv", type, function(error, data) {
     data[i].class = ( data[i].value >= 0 ) ? 'positive' : 'negative'
   }
   data.push({
-    name: 'Total',
+    name: 'Totaal',
     end: cumulative,
     start: 0,
-    class: 'total'
+    class: 'totaal'
   });
   x.domain(data.map(function(d) { return d.name; }));
   y.domain([0, d3.max(data, function(d) { return d.end; })]);
@@ -93,7 +93,7 @@ d3.csv("datatotaal.csv", type, function(error, data) {
       .attr("y", function(d) { return y(d.end) + 5; })
       .attr("dy", function(d) { return ((d.class=='negative') ? '-' : '') + ".75em" })
       .text(function(d) { return dollarFormatter(d.end - d.start);});
-  bar.filter(function(d) { return d.class != "total" }).append("line")
+  bar.filter(function(d) { return d.class != "totaal" }).append("line")
       .attr("class", "connector")
       .attr("x1", x.rangeBand() + 5 )
       .attr("y1", function(d) { return y(d.end) } )
