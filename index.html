@@ -52,7 +52,7 @@ var chart = d3.select(".chart")
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-d3.csv("data.csv", type, function(error, data) {
+d3.csv("datatotaal.csv", type, function(error, data) {
   // Transform data (i.e., finding cumulative values and total) for easier charting
   var cumulative = 0;
   for (var i = 0; i < data.length; i++) {
