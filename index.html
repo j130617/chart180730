@@ -119,7 +119,7 @@ var chart = d3.select(".chart")
       .attr("dy", function(d) { return ((d.class=='negative') ? '-' : '') + ".75em" })
       .text(function(d) { return dollarFormatter(d.end - d.start);});
   
-    bar.filter(function(d) { return d.class != "totaal", != "doel" }).append("line")
+    bar.filter(function(d) { return d.class != "totaal", "doel" }).append("line")
       .attr("class", "connector")
       .attr("x1", x.rangeBand() + 5 )
       .attr("y1", function(d) { return y(d.end) } )
