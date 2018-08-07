@@ -125,6 +125,16 @@ var chart = d3.select(".chart")
       .attr("y1", function(d) { return y(d.end) } )
       .attr("x2", x.rangeBand() / ( 1 - padding) - 5 )
       .attr("y2", function(d) { return y(d.end) } )
+        	// Add a small label for the graph name.
+    
+    chart.append("text")
+      .attr("class", "title")
+      .attr("x", 10)
+      .attr("y", -10)
+      .attr("font-weight", "bold")
+      .style("text-anchor", "start")
+      .style("font-size", 9)
+      .text("Campagne totaal)");  
 });
 function type(d) {
   d.value = +d.value;
