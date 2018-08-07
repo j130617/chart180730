@@ -2,16 +2,16 @@
 <meta charset="utf-8">
 <style>
 .bar.totaal rect {
-  fill: steelblue;
+  fill: darkolivegreen;
 }
 .bar.positive rect {
-  fill: darkolivegreen;
+  fill: steelblue;
 }
 .bar.negative rect {
   fill: crimson;
 }
 .bar.doel rect {
-  fill: grey;
+  fill: yellow;
 }
 .bar line.connector {
   stroke: grey;
@@ -134,7 +134,7 @@ var chart = d3.select(".chart")
       .attr("font-weight", "bold")
       .style("text-anchor", "start")
       .style("font-size", 9)
-      .text("Campagne totaal)");  
+      .text("Campagne totaal");  
 });
 function type(d) {
   d.value = +d.value;
