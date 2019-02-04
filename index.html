@@ -77,15 +77,15 @@ var chart = d3.select(".chart")
     data[i].class = ( data[i].value >= 0 ) ? 'positive' : 'negative'
   }
   data.push({
-    name: 'Eindstand 2018',
+    name: 'Voortgang t/m jan 2019',
     end: cumulative,
     start: 0,
     class: 'totaal'
   });
    
   data.push({
-    name: 'Doel 2018',
-    end: 100,
+    name: 'Doel 2019',
+    end: 300,
     start: 0,
     class: 'doel'
   });
@@ -134,7 +134,7 @@ var chart = d3.select(".chart")
       .attr("font-weight", "bold")
       .style("text-anchor", "start")
       .style("font-size", 9)
-      .text("Ledenontwikkeling eCom 2018 ");  
+      .text("Ledenontwikkeling eCom 2019 ");  
 });
 function type(d) {
   d.value = +d.value;
